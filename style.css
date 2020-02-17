@@ -4,7 +4,7 @@ body{
 }
 
 .logo{
-	width: 6z0%;
+	width: 60%;
 	display: block;
 	margin: auto;
 }
@@ -32,15 +32,10 @@ body{
 }
 
 #seasonsDiv{
-	//background: #0c6;
-	//background: #555;
-	//float: left;
 	width: 50%;
-	//background: #FBC;
 }
 .seasons{
 	font-size: 26px;
-	//background: #067;
 	background: #FBC;
 	transition-duration: 0.1s;
 }
@@ -117,4 +112,11 @@ body{
 
 .vidTitle{
 	color: #FFF;
+}
+
+.theponyarchiveMirror{
+	width: 15%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
