@@ -1,23 +1,64 @@
+@font-face{
+	font-family: "Lato";
+	src: url("fonts/Lato-Regular.ttf") format("truetype");
+}
+
 body{
+	font-family: "Lato";
 	background: black;
 	margin: 0;
+}
+
+.home{
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	text-decoration: none;
+	font-size: 40px;
+	transition-duration: 0.2s;
+	color: white;
+}
+.home:hover{
+	opacity: 1;
 }
 
 .logo{
 	width: 60%;
 	display: block;
-	margin: auto;
+	margin: 15px auto;
 }
 
 .info{
+	font-size: 22px;
 	color: white;
+	margin: 0px 5px 15px 5px;
+	padding: 5px;
+	background: #0e0e0e;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+}
+
+.info2{
+	font-size: 18px;
+	background-color: #1c1c1c;
+	margin: 5px;
+}
+
+a:link{
+	color: #eb3e93;
+	text-decoration: none;
+}
+a:visited{
+	color: #eb3e93;
 }
 
 /* Season and episode selection */
 .button{
 	display: inline-block;
 	padding: 4px;
-	color: black;
+	color: black !important;
 	text-decoration: none;
 	margin: 2px;
 }
@@ -28,7 +69,7 @@ body{
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
-	margin: 5px;
+	margin: 15px 5px;
 }
 
 #seasonsDiv{
@@ -36,14 +77,18 @@ body{
 }
 .seasons{
 	font-size: 26px;
-	background: #FBC;
-	transition-duration: 0.1s;
+	//background: #FBC;
+	//background: #eb3e93;
+	background: #e39;
+	transition-duration: 0.2s;
 }
 .seasons:hover{
-	background: #F26;
+	//background: #F26;
+	background: #39e;
 }
 .seasonSelected{
-	background: #F26;
+	//background: #F26;
+	background: #39e;
 }
 
 #episodesDiv{
@@ -52,14 +97,17 @@ body{
 }
 .episodes{
 	font-size: 26px;
-	background: #FBC;
-	transition-duration: 0.1s;
+	//background: #FBC;
+	background: #e39;
+	transition-duration: 0.2s;
 }
 .episodes:hover{
-	background: #F26;
+	//background: #F26;
+	background: #39e;
 }
 .episodeSelected{
-	background: #F26;
+	//background: #F26;
+	background: #39e;
 }
 
 /* Video list */
@@ -73,6 +121,8 @@ body{
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
+	border-radius: 8px;
+	overflow: hidden;
 }
 .reupload{
 	border-color: yellow;
@@ -115,11 +165,66 @@ body{
 
 .vidTitle{
 	color: #FFF;
+	transition-duration: 0.1s;
+}
+.vidTitle:hover{
+	color: #bbb;
 }
 
-.theponyarchiveMirror{
-	width: 15%;
+.archiveListButton{
+	color: #fff;
+	font-size: 1.75vw;
+	cursor: pointer;
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	background: none;
+	border-style: none;
+	transition-duration: 0.1s;
+}
+.archiveListButton:hover{
+	color: #bbb;
+}
+.archiveList{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0e0e0e;
+	transition-duration: 0.1s;
+	padding: 10px 0;
+}
+button + .archiveList:active,
+button:focus + .archiveList {
+	opacity: 1;
+	visibility: visible;
+}
+.archiveList a{
+	display: block;
+	margin: 0 10px;
+	top: 0;
+	color: white;
+	transition-duration: 0.1s;
+
+	//border-style: solid;
+	//border-width: 1px;
+	//border-color: #1c1c1c;
+	background-color: #1c1c1c;
+	//margin-bottom: -1px;
+}
+.archiveList a:hover{
+	background-color: #2a2a2a;
+}
+.archiveList img{
+	vertical-align: middle;
+	object-fit: contain;
+	height: 2vw;
+	width: 2vw;
+}
+.archiveList span{
+	vertical-align: middle;
+	font-size: 2vw;
 }
