@@ -125,13 +125,10 @@ a:visited{
 	overflow: hidden;
 }
 .reupload{
-	border-color: yellow;
+	border-color: cyan;
 }
 .recovered{
 	border-color: red;
-}
-.dateChanged{
-	border-color: cyan;
 }
 
 .vidThumbnail{
